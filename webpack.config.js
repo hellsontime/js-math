@@ -2,9 +2,15 @@ const path = require('path');
 const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: {
+      import: './src/index.js',
+      dependOn: 'shared',
+    },
+    shared: 'lodash',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   optimization: {
@@ -17,6 +23,10 @@ module.exports = {
         },
         extractComments: false,
     })],
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
