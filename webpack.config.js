@@ -7,6 +7,10 @@ module.exports = {
       import: './src/index.js',
       dependOn: 'shared',
     },
+    print: {
+      import: "./src/print.js",
+      dependOn: 'shared',
+    },
     shared: 'lodash',
   },
   output: {
