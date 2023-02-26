@@ -10,10 +10,15 @@
     "type": "git",
     "url": "git+https://github.com/hellsontime/js-math.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hellsontime/js-math/issues"
   },
-  "homepage": "https://github.com/hellsontime/js-math#readme"
+  "homepage": "https://github.com/hellsontime/js-math#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
 }
