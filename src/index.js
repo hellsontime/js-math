@@ -1,13 +1,13 @@
-import "./style.css";
-import Icon from "./icon.png";
-import printMe from "./print";
+import './style.css';
+import Icon from './icon.png';
+import printMe from './print';
 
 async function getComponent() {
-  const element = document.createElement("div");
-  const btn = document.createElement("button");
-  const { default: _ } = await import("lodash");
+  const element = document.createElement('div');
+  const btn = document.createElement('button');
+  const { default: _ } = await import('lodash');
 
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
+  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
   // Add the image to our existing div.
   const myIcon = new Image();
@@ -16,7 +16,7 @@ async function getComponent() {
   element.appendChild(myIcon);
 
   // Test button
-  btn.innerHTML = "Click me and check the console!";
+  btn.innerHTML = 'Click me and check the console!';
   btn.onclick = printMe;
 
   element.appendChild(btn);
