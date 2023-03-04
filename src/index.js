@@ -1,5 +1,5 @@
-import './style.css';
-import Icon from './icon.png';
+import './scss/style.scss';
+import Icon from './img/icon.png';
 import printMe from './print';
 
 async function getComponent() {
@@ -7,7 +7,8 @@ async function getComponent() {
   const btn = document.createElement('button');
   const { default: _ } = await import('lodash');
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+  element.innerHTML = _.join(['Helllo', 'webpack'], ' ');
+  element.classList.add('hello');
 
   // Add the image to our existing div.
   const myIcon = new Image();
