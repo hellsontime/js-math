@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../src/img/icon.png"/>
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="icon" type="image/png" href="./img/icon.png"/>
+    <title>JS Calculator</title>
   </head>
   <body>
+
+    <!-- <div class="night-switcher">☾</div> -->
 
     <div class="calculator">
       <div class="header">
@@ -22,31 +24,44 @@
       </div>
       <div class="keys">
         <div class="row">
+          <div class="key base-grey">MC</div>
+          <div class="key base-grey">M+</div>
+          <div class="key base-grey">M-</div>
           <div class="key base-grey">AC</div>
           <div class="key base-grey">+/-</div>
           <div class="key base-grey">%</div>
           <div class="key orange">÷</div>
        </div>
        <div class="row">
+          <div class="key base-grey">MR</div>
+          <div class="key base-grey"><div class="super-key">x <span class="power">2</span></div></div>
+          <div class="key base-grey"><div class="super-key">x <span class="power">3</span></div></div>
           <div class="key light-grey">7</div>
           <div class="key light-grey">8</div>
           <div class="key light-grey">9</div>
           <div class="key orange">×</div>
        </div>
        <div class="row">
+          <div class="key base-grey"><div class="super-key">x <span class="power">y</span></div></div>
+          <div class="key base-grey"><div class="super-key">10 <span class="power">X</span></div></div>
+          <div class="key base-grey">1/x</div>
           <div class="key light-grey">4</div>
           <div class="key light-grey">5</div>
           <div class="key light-grey">6</div>
           <div class="key orange">-</div>
        </div>
        <div class="row">
+          <div class="key base-grey"><div class="super-key"><span class="root">2</span> √x</div></div>
+          <div class="key base-grey"><div class="super-key"><span class="root">3</span> √x</div></div>
+          <div class="key base-grey"><div class="super-key"><span class="root">y</span> √x</div></div>
           <div class="key light-grey">1</div>
           <div class="key light-grey">2</div>
           <div class="key light-grey">3</div>
           <div class="key orange">+</div>
        </div>
        <div class="row last">
-          <div class="key stretched light-grey">0</div>
+          <div class="key tripple base-grey">x!</div>
+          <div class="key double light-grey">0</div>
           <div class="key light-grey">,</div>
           <div class="key orange">=</div>
        </div>
