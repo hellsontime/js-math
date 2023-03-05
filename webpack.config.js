@@ -6,18 +6,19 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
   entry: {
     index: {
-      import: './src/index.js',
-      dependOn: 'shared'
+      import: './src/index.js'
     },
     print: {
-      import: './src/print.js',
-      dependOn: 'shared'
-    },
-    shared: 'lodash'
+      import: './src/print.js'
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management'
+      hash: true,
+      title: 'My Awesom application',
+      myPageHeader: 'Hello World',
+      template: './src/index.html',
+      filename: './index.html'
     })
   ],
   output: {
