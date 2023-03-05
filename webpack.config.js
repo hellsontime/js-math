@@ -9,14 +9,12 @@ module.exports = {
       import: './src/index.js'
     },
     print: {
-      import: './src/print.js'
+      import: './src/js/print.js'
     }
   },
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      title: 'My Awesom application',
-      myPageHeader: 'Hello World',
       template: './src/index.html',
       filename: './index.html'
     })
