@@ -13,9 +13,9 @@ build js-math project with npm
   npm run build
 ```
 
-### Build project every time files changed
+### Watch project
 
-watch project files and buid project
+watch project files and buid project each time files getting changed
 
 ```bash
   npm run watch
