@@ -1,5 +1,5 @@
 import { allClear, changeSign, percent } from '../operations/baseOperations';
-import { plus, minus, multiply, division } from '../operations/baseCalculations';
+import { plus, minus, multiply, division, equals } from '../operations/baseCalculations';
 
 const actions = {
     allClear,
@@ -8,7 +8,8 @@ const actions = {
     plus,
     minus,
     multiply,
-    division
+    division,
+    equals
 };
 
 export default actions;

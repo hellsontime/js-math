@@ -7,9 +7,6 @@ module.exports = {
     entry: {
         index: {
             import: './src/index.js'
-        },
-        print: {
-            import: './src/js/print.js'
         }
     },
     plugins: [

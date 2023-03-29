@@ -1,4 +1,4 @@
-import updateInput from './updateInput';
+import { updateInput } from './updateInput';
 
 const updateNumber = (value) => {
     const input = document.querySelector('#input');

@@ -1,7 +1,9 @@
-import updateInput from './updateInput';
+import { updateInput } from './updateInput';
+import { clearPreviousResult } from '../storage/result';
 
 export const allClear = () => {
     updateInput(0);
+    clearPreviousResult();
 };
 
 export const changeSign = () => {
