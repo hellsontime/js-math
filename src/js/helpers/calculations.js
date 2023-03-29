@@ -14,11 +14,14 @@ const division = (x, y) => {
     return parseFloat(x) / parseFloat(y);
 };
 
-const actions = {
-    plus,
-    minus,
-    multiply,
-    division
+const powerY = (x, y) => {
+    return parseFloat(x) ** parseFloat(y);
 };
 
-export default actions;
+const rootY = (x, y) => {
+    return parseFloat(x) ** (1 / parseFloat(y));
+};
+
+const calculations = { plus, minus, multiply, division, powerY, rootY };
+
+export default calculations;

@@ -1,15 +1,6 @@
-import { allClear, changeSign, percent } from '../operations/baseOperations';
-import { plus, minus, multiply, division, equals } from '../operations/baseCalculations';
+import { allClear } from '../operations/baseOperations';
+import { equals } from '../operations/baseCalculations';
 
-const actions = {
-    allClear,
-    changeSign,
-    percent,
-    plus,
-    minus,
-    multiply,
-    division,
-    equals
-};
+const actions = { allClear, equals };
 
 export default actions;

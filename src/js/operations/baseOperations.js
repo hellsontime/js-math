@@ -1,25 +1,19 @@
 import { updateInput } from './updateInput';
-import { clearPreviousResult } from '../storage/result';
+import { setPreviousResult } from '../storage/result';
+import { clearCurrentAction } from '../storage/action';
+import operations from '../helpers/operations';
 
 export const allClear = () => {
     updateInput(0);
-    clearPreviousResult();
+    setPreviousResult(0);
+    clearCurrentAction();
 };
 
-export const changeSign = () => {
+export const callOperation = (operation) => {
     const input = document.querySelector('#input');
-    const inputValue = input.getAttribute('value');
-    const currentValue = parseFloat(inputValue, 10);
-    const newValue = currentValue * -1;
+    const currentValue = input.getAttribute('value');
+    const result = operations[operation](currentValue);
 
-    updateInput(newValue);
-};
-
-export const percent = () => {
-    const input = document.querySelector('#input');
-    const inputValue = input.getAttribute('value');
-    const currentValue = parseFloat(inputValue, 10);
-    const newValue = currentValue / 100;
-
-    updateInput(newValue);
+    updateInput(result, 0);
+    setPreviousResult(result);
 };

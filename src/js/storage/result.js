@@ -1,7 +1,7 @@
-export const setPreviousResult = () => {
+export const setPreviousResult = (result = null) => {
     const input = document.querySelector('#input');
     const inputValue = input.getAttribute('value');
-    localStorage.setItem('previosResult', inputValue);
+    localStorage.setItem('previosResult', result || inputValue);
 };
 
 export const getPreviousResult = () => {

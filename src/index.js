@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-free/js/all';
 import '@fortawesome/fontawesome-free/css/all.css';
 import { toggleNightMode, checkNightMode } from './js/modeSwitcher';
 import catchAction from './js/input';
-import { clearPreviousResult } from './js/storage/result';
+import { setPreviousResult } from './js/storage/result';
 import { clearCurrentAction } from './js/storage/action';
 
 async function getComponent() {
@@ -12,7 +12,7 @@ async function getComponent() {
     const modeSwitchBtn = document.querySelector('#modeSwitch');
     modeSwitchBtn.addEventListener('click', () => toggleNightMode());
 
-    clearPreviousResult();
+    setPreviousResult(0);
     clearCurrentAction();
 
     const buttons = document.querySelectorAll('.key');

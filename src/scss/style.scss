@@ -122,11 +122,10 @@ body {
 
                 &.orange {
                     background: $orange;
-                }
-
-                &.orange.active {
-                    background-color: $lightWhite;
-                    color: $orange;
+                    &.active {
+                        background: $white;
+                        color: $orange;
+                    }
                 }
 
                 &.dark-grey {
@@ -135,6 +134,10 @@ body {
 
                 &.base-grey {
                     background: $baseGrey;
+                    &.active {
+                        background: $white;
+                        color: $baseGrey;
+                    }
                 }
 
                 &.light-grey {
