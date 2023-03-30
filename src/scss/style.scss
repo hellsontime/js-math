@@ -17,13 +17,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $bgLight;
+    background-color: $bgDark;
     width: 100%;
     height: 100%;
     transition: $baseTransition;
 
     &.switched {
-        background-color: $bgDark;
+        background-color: $bgLight;
+        .calculator {
+            border: none;
+            box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.3);
+            .header {
+                background: $bgLight;
+                .input {
+                    color: $darkGrey;
+                }
+            }
+            .keys {
+                background: $bgLight;
+                .key {
+                    color: $darkGrey;
+                    &.orange{
+                        color: white
+                    }
+                    &.base-grey {
+                        background: $darkLight;
+                    }
+                    &.light-grey {
+                        background: $baseLight;
+                    }
+                }
+            }
+        }
     }
 }
 
