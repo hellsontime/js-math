@@ -5,34 +5,30 @@ import calculations from '../helpers/calculations';
 
 const input = document.querySelector('#input');
 
+// eslint-disable-next-line consistent-return
 export const equals = () => {
     const previosResult = getPreviousResult();
     const currentAction = getCurrentAction();
     const currentValue = input.getAttribute('value');
-    const result = calculations[currentAction](previosResult, currentValue);
+    if (previosResult && currentAction && currentValue) {
+        const result = calculations[currentAction](previosResult, currentValue);
 
-    updateInput(result, 0);
-    setPreviousResult(result);
-    clearCurrentAction();
+        updateInput(result, 0);
+        setPreviousResult(result);
+        clearCurrentAction();
 
-    return result;
+        return result;
+    }
 };
 
 export const callCalculation = (calculation) => {
-    // TODO: fix issue with broken actions and values
-    // let result;
-
     if (getCurrentAction()) {
         equals();
     }
 
-    // if (result) {
-    //     setPreviousResult(result);
-    // } else {
-    //     setPreviousResult();
-    // }
-
-    setPreviousResult();
+    if (!getPreviousResult() || getPreviousResult() === '0') {
+        setPreviousResult();
+    }
     setCurrentAction(calculation);
     updateInputValue(0);
 };
