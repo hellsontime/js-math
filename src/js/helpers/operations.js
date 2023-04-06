@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+
 const changeSign = (x) => {
     return parseFloat(x) * -1;
 };
@@ -30,6 +32,12 @@ const root3 = (x) => {
     return parseFloat(x) ** (1 / 3);
 };
 
-const operations = { changeSign, percent, tenX, oneDivX, power2, power3, root2, root3 };
+const factorial = (x) => {
+    if (x < 0) return NaN;
+    if (x < 2) return 1;
+    return x * factorial(x - 1);
+};
+
+const operations = { changeSign, percent, tenX, oneDivX, power2, power3, root2, root3, factorial };
 
 export default operations;

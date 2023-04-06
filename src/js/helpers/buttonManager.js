@@ -8,3 +8,7 @@ export const resetAllDynamicButtons = () => {
 export const setActiveButton = (button) => {
     button.classList.add('active');
 };
+
+export const unsetActveButton = (button) => {
+    button.classList.remove('active');
+};

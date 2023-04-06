@@ -6,6 +6,7 @@ import { toggleNightMode, checkNightMode } from './js/modeSwitcher';
 import catchAction from './js/input';
 import { setPreviousResult } from './js/storage/result';
 import { clearCurrentAction } from './js/storage/action';
+import { setMemory } from './js/storage/memory';
 
 async function getComponent() {
     window.addEventListener('load', checkNightMode());
@@ -14,6 +15,7 @@ async function getComponent() {
 
     setPreviousResult(0);
     clearCurrentAction();
+    setMemory(0);
 
     const buttons = document.querySelectorAll('.key');
     buttons.forEach((button) => {
