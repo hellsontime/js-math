@@ -28,4 +28,12 @@ run webserver for development
 ```bash
   npm run serve
 ```
+
+### Run test
+
+run selenium auto tests (chromedriver should be configured on your system)
+
+```bash
+  npm run test
+```
     
