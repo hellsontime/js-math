@@ -1,13 +1,12 @@
-import { getCurrentAction } from '../storage/action';
-import { clearPreviousResult, getPreviousResult } from '../storage/result';
 import { updateInput } from './updateInput';
+import calculator from '../Calculator';
 
 const updateNumber = (value) => {
     const input = document.querySelector('#input');
     const inputValue = input.getAttribute('value');
 
-    if (!getCurrentAction() && getPreviousResult()) {
-        clearPreviousResult();
+    if (!calculator.getCurrentAction() && calculator.getPreviousResult()) {
+        calculator.clearPreviousResult();
     }
 
     if (value === 'dot') {

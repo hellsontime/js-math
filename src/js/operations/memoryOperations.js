@@ -2,14 +2,14 @@ import { clearMemory, getMemory, setMemory } from '../storage/memory';
 import { setActiveButton, unsetActveButton } from '../helpers/buttonManager';
 import { updateInput, updateInputValue } from './updateInput';
 import calculations from '../helpers/calculations';
-import { getPreviousResult, setPreviousResult } from '../storage/result';
+import calculator from '../Calculator';
 
 const memoryRecallButton = document.querySelector('[value="memoryRecall"]');
 
 const getValueForMemory = () => {
     const input = document.querySelector('#input');
     const currentValue = input.getAttribute('value');
-    const previousResult = getPreviousResult();
+    const previousResult = calculator.getPreviousResult();
 
     if (currentValue === '0' && previousResult) {
         return previousResult;
@@ -25,7 +25,7 @@ export const memoryClear = () => {
 export const memoryRecall = () => {
     const memoryValue = getMemory();
     updateInput(memoryValue, 0);
-    setPreviousResult(memoryValue);
+    calculator.setPreviousResult(memoryValue);
 };
 
 export const memoryPlus = () => {
