@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./img/icon.png"/>
+    <link rel="icon" type="image/png" href="../img/icon.png"/>
     <title>JS Calculator</title>
   </head>
   <body>
@@ -22,52 +22,52 @@
                <span class="yellow"></span>
                <span class="green"></span>
             </div>
-            <div class="input">
+            <div id="input" class="input" value="0">
                0
             </div>
          </div>
          <div class="keys">
          <div class="row">
-            <div class="key base-grey">MC</div>
-            <div class="key base-grey">M+</div>
-            <div class="key base-grey">M-</div>
-            <div class="key base-grey">AC</div>
-            <div class="key base-grey">+/-</div>
-            <div class="key base-grey">%</div>
-            <div class="key orange">÷</div>
+            <div class="key base-grey" key="action" value="memoryClear">MC</div>
+            <div class="key base-grey" key="action" value="memoryPlus">M+</div>
+            <div class="key base-grey" key="action" value="memoryMinus">M-</div>
+            <div class="key base-grey" key="action" value="allClear">AC</div>
+            <div class="key base-grey" key="action" value="changeSign">+/-</div>
+            <div class="key base-grey" key="action" value="percent">%</div>
+            <div class="key orange" key="action" value="division" dynamic>÷</div>
          </div>
          <div class="row">
-            <div class="key base-grey">MR</div>
-            <div class="key base-grey"><div class="super-key">x <span class="power">2</span></div></div>
-            <div class="key base-grey"><div class="super-key">x <span class="power">3</span></div></div>
-            <div class="key light-grey">7</div>
-            <div class="key light-grey">8</div>
-            <div class="key light-grey">9</div>
-            <div class="key orange">×</div>
+            <div class="key base-grey" key="action" value="memoryRecall">MR</div>
+            <div class="key base-grey" key="action" value="tenX"><div class="super-key">10 <span class="power">X</span></div></div>
+            <div class="key base-grey" key="action" value="oneDivX">1/x</div>
+            <div class="key light-grey" key="digit" value="7">7</div>
+            <div class="key light-grey" key="digit" value="8">8</div>
+            <div class="key light-grey" key="digit" value="9">9</div>
+            <div class="key orange" key="action" value="multiply" dynamic>×</div>
          </div>
          <div class="row">
-            <div class="key base-grey"><div class="super-key">x <span class="power">y</span></div></div>
-            <div class="key base-grey"><div class="super-key">10 <span class="power">X</span></div></div>
-            <div class="key base-grey">1/x</div>
-            <div class="key light-grey">4</div>
-            <div class="key light-grey">5</div>
-            <div class="key light-grey">6</div>
-            <div class="key orange">-</div>
+            <div class="key base-grey" key="action" value="power2"><div class="super-key">x <span class="power">2</span></div></div>
+            <div class="key base-grey" key="action" value="power3"><div class="super-key">x <span class="power">3</span></div></div>
+            <div class="key base-grey" key="action" value="powerY" dynamic><div class="super-key">x <span class="power">y</span></div></div>
+            <div class="key light-grey" key="digit" value="4">4</div>
+            <div class="key light-grey" key="digit" value="5">5</div>
+            <div class="key light-grey" key="digit" value="6">6</div>
+            <div class="key orange" key="action" value="minus" dynamic>-</div>
          </div>
          <div class="row">
-            <div class="key base-grey"><div class="super-key"><span class="root">2</span> √x</div></div>
-            <div class="key base-grey"><div class="super-key"><span class="root">3</span> √x</div></div>
-            <div class="key base-grey"><div class="super-key"><span class="root">y</span> √x</div></div>
-            <div class="key light-grey">1</div>
-            <div class="key light-grey">2</div>
-            <div class="key light-grey">3</div>
-            <div class="key orange">+</div>
+            <div class="key base-grey" key="action" value="root2"><div class="super-key"><span class="root">2</span> √x</div></div>
+            <div class="key base-grey" key="action" value="root3"><div class="super-key"><span class="root">3</span> √x</div></div>
+            <div class="key base-grey" key="action" value="rootY" dynamic><div class="super-key"><span class="root">y</span> √x</div></div>
+            <div class="key light-grey" key="digit" value="1">1</div>
+            <div class="key light-grey" key="digit" value="2">2</div>
+            <div class="key light-grey" key="digit" value="3">3</div>
+            <div class="key orange" key="action" value="plus" dynamic>+</div>
          </div>
          <div class="row last">
-            <div class="key tripple base-grey">x!</div>
-            <div class="key double light-grey">0</div>
-            <div class="key light-grey">,</div>
-            <div class="key orange">=</div>
+            <div class="key tripple base-grey" key="action" value="factorial">x!</div>
+            <div class="key double light-grey" key="digit" value="0">0</div>
+            <div class="key light-grey" key="digit" value="dot">,</div>
+            <div class="key orange" key="action" value="equals">=</div>
          </div>
          </div>
       </div>

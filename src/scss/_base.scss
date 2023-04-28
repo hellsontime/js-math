@@ -1,18 +1,26 @@
-// Color palette
-$darkGrey: #48494A;
-$baseGrey: #5A5B5C;
+// Common colors 
 $lightGrey: #757677;
 $x2lightGrey: #d2d2d2;
 $white: #fff;
+$lightWhite: #f2f2f2;
 $black: #000;
 $orange: #FF9E0B;
+$lightOrange: #ffb648;
+
+// Dark color palette
+$darkGrey: #48494A;
+$baseGrey: #5A5B5C;
+
+// Light color palette
+$darkLight: #dddddd;
+$baseLight: #e8e8e8;
 
 // BG colors
 $bgLight: #f5f5f5;
 $bgDark: #262626;
 
 // Base transition time
-$baseTransition: 0.15s ease-in-out;
+$baseTransition: 0.2s ease-in-out;
 
 // Base border radius
 $baseRadius: 10px;
