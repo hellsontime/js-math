@@ -1,18 +1,17 @@
 import { updateInput, updateInputValue } from './updateInput';
-import { getPreviousResult, setPreviousResult } from '../storage/result';
-import { clearCurrentAction } from '../storage/action';
 import operations from '../helpers/operations';
+import calculator from '../Calculator';
 
 export const allClear = () => {
     updateInput(0);
-    setPreviousResult(0);
-    clearCurrentAction();
+    calculator.setPreviousResult(0);
+    calculator.clearCurrentAction();
 };
 
 export const callOperation = (operation) => {
     const input = document.querySelector('#input');
     const currentValue = input.getAttribute('value');
-    const previosResult = getPreviousResult();
+    const previosResult = calculator.getPreviousResult();
     const result = operations[operation](previosResult || currentValue);
 
     const notResetableActions = ['changeSign'];
@@ -21,5 +20,5 @@ export const callOperation = (operation) => {
         updateInputValue(result);
     }
 
-    setPreviousResult(result);
+    calculator.setPreviousResult(result);
 };
